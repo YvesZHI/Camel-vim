@@ -16,7 +16,7 @@ echo "alias vimpy=\"vim --cmd 'let python=1'\" > ~/.bashrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim -k
 
 cd ~/.vim/bundle && git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
