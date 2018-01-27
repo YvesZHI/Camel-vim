@@ -10,8 +10,8 @@ cp ./*.vim ~/.vim/
 
 sed -i '/CStyle=1/c\' ~/.bashrc
 sed -i '/python=1/c\' ~/.bashrc
-echo "alias vimc=\"vim --cmd 'let CStyle=1'\" > ~/.bashrc
-echo "alias vimpy=\"vim --cmd 'let python=1'\" > ~/.bashrc
+echo "alias vimc=\"vim --cmd 'let CStyle=1'\"" >> ~/.bashrc
+echo "alias vimpy=\"vim --cmd 'let python=1'\"" >> ~/.bashrc
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
