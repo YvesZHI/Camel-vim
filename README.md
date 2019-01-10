@@ -28,4 +28,4 @@ Execute `source ~/.bashrc` if it is the first time to make `vimc` and `vimpy` wo
 
 
 ### Some bugs ###
-Downloading clang may fail while installing YCM. In this case, you need to download clang(libclang-7.0.0-x86_64-unknown-linux-gnu.tar.bz2 for x86_64) from https://dl.bintray.com/micbou/libclang/ and put it into `~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives/'.
+Downloading clang may fail while installing YCM. In this case, you need to download clang (`libclang-7.0.0-x86_64-unknown-linux-gnu.tar.bz2` for x86_64) manually from https://dl.bintray.com/micbou/libclang/ and put it into `~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives/`.
