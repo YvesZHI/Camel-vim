@@ -13,18 +13,20 @@ Execute `./install.sh`.<br>
 
 
 ### General Usage ###
-Execute `source ~/.bashrc` if it is the first time to make `vimc` and `vimpy` work.
+Execute `source ~/.bashrc` if it is the first time to make `vimc` and `vimpy` work.<br>
+Edit the line 59 to 61 of `ycm_extra_conf.py` to change the searching path of YCM.<br>
 
-`:Q`    --- quit vim and all plugins, delete `.ycm_extra_conf.py` and `.tags` in the root of project<br>
-`\tg`   --- open or close the window of taglist<br>
-`\cc`   --- comment one line<br>
-`\cm`   --- comment multi lines<br>
-`\cu`   --- uncomment<br>
-`\vv`   --- search the word under cursor in project<br>
-`F12`   --- jump to header file<br>
-`<C-]>` --- jump to declaration or to definition<br>
-`<C-o>` --- go backword<br>
-`<C-i>` --- go forward<br>
+`:Q`     --- quit vim and all plugins, delete `.ycm_extra_conf.py` and `.tags` in the root of project<br>
+`\tg`    --- open or close the window of taglist<br>
+`\cc`    --- comment one line<br>
+`\cm`    --- comment multi lines<br>
+`\cu`    --- uncomment<br>
+`\vv`    --- search the word under cursor in project<br>
+`F12`    --- jump to header file<br>
+`<C-]>`  --- jump to declaration or to definition<br>
+`g<C-]>` --- jump to the only match or list multi matches<br>
+`<C-o>`  --- go backword<br>
+`<C-i>`  --- go forward<br>
 
 
 ### Some bugs ###
