@@ -1,14 +1,3 @@
-"Q     --- quit vim and delete .ycm_extra_conf.py and .tags in directory of project
-"\tg    --- toggle or untoggle
-"\cc   --- comment one line
-"\cm   --- comment multi lines
-"\cu   --- uncomment
-"\vv   --- grep word under cursor in directory of project
-"F12   --- jump to header file or to declaration
-"<C-o> --- go backward
-"<c-i> --- go forward
-
-
 command Q call delete('.ycm_extra_conf.py')|call delete('.tags')|qa
 "command Qone q|TlistClose
 "cnoreabbrev q Qone
