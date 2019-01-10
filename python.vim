@@ -56,7 +56,6 @@ let g:ConqueTerm_StartMessages=0
 
 "nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
-"nnoremap <leader>tg :TlistToggle<CR>
-nnoremap tg :TlistToggle<CR>
+nnoremap <leader>tg :TlistToggle<CR>
 nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
 nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;

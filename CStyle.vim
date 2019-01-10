@@ -1,5 +1,5 @@
 "Q     --- quit vim and delete .ycm_extra_conf.py and .tags in directory of project
-"tg    --- toggle or untoggle
+"\tg    --- toggle or untoggle
 "\cc   --- comment one line
 "\cm   --- comment multi lines
 "\cu   --- uncomment
@@ -99,7 +99,6 @@ let g:ConqueTerm_StartMessages=0
 nnoremap <F5> :!make<CR>
 
 nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
-"nnoremap <leader>tg :TlistToggle<CR>
-nnoremap tg :TlistToggle<CR>
+nnoremap <leader>tg :TlistToggle<CR>
 nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
 nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
