@@ -1,4 +1,6 @@
-command Q q|q|q|q|q|q|q
+command Q call delete('.ycm_extra_conf.py')|qa
+"command Qone q|TlistClose
+"cnoreabbrev q Qone
 command Html s/<[^>]*/\r&/g|g/^$/d
 command Gdb ConqueGdb
 
@@ -11,11 +13,19 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 autocmd VimEnter * NERDTree
-execute pathogen#infect()
 
 let NERDTreeIgnore=['\(\.py\|\.html\)\@<!$[[file]]']
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeShowLineNumbers=1
+
+let g:Tlist_Use_Right_Window=1
+let g:Tlist_Auto_Open=1
+
+let g:EasyGrepRecursive=1
+let g:EasyGrepHidden=1
+let g:EasyGrepIgnoreCase=1
+let g:EasyGrepMode=2
+let g:EasyGrepFileAssociations="/home/zyh/.vim/bundle/vim-easygrep/plugin/EasyGrepFileAssociations"
 
 let g:ycm_python_binary_path='/usr/bin/python2.7'
 let g:ycm_python_binary_path='python'
@@ -55,11 +65,11 @@ let g:ConqueTerm_Color=2
 let g:ConqueTerm_CloseOnEnd=1
 let g:ConqueTerm_StartMessages=0
 
-vnoremap <F7> <C-v>^I#<Esc> \| :noh<CR>
-vnoremap <F8> :s/^ *\t*\#//g<CR> \| :noh<CR>
-nnoremap <F7> <C-v>^I#<Esc> \| :noh<CR>
-nnoremap <F8> :s/^ *\t*\#//g<CR> \| :noh<CR>
-           "\jd
-"nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:autotagTagsFile=".tags"
 
+"nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
+"nnoremap <leader>tg :TlistToggle<CR>
+nnoremap tg :TlistToggle<CR>
+nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
+nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;

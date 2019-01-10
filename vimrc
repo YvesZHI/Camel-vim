@@ -7,15 +7,19 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " options
-Plugin 'tpope/vim-fugitive'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/Conque-GDB'
-" https://github.com/vim-syntastic/syntastic  installed but not through Vundle
+Plugin 'gmccreight/vim-easygrep'
+Plugin 'tpope/vim-fugitive'
+" sudo apt install ctags
 
 call vundle#end()
+
 
 filetype on
 filetype indent on
@@ -36,6 +40,7 @@ set cino=g0,+0,+t0
 set tabstop=4
 set sw=4
 set smarttab
+set expandtab
 set softtabstop=4
 set matchtime=2
 
@@ -64,15 +69,6 @@ nnoremap <C-k> kddpk
 nnoremap <C-j> ddp
 nnoremap <C-a> ggvG$
 nnoremap <C-v><C-a> gg<C-v>G$
-nnoremap u u \| :noh<CR>
-vnoremap <F7> <C-v>^I"<Esc> \| :noh<CR>
-vnoremap <F8> :s/^ *\t*"//g<CR> \| :noh<CR>
-nnoremap <F7> <C-v>^I"<Esc> \| :noh<CR>
-nnoremap <F8> :s/^ *\t*"//g<CR> \| :noh<CR>
-vnoremap <F5> <C-v>^I#<Esc> \| :noh<CR>
-vnoremap <F6> :s/^ *\t*#//g<CR> \| :noh<CR>
-nnoremap <F5> <C-v>^I#<Esc> \| :noh<CR>
-nnoremap <F6> :s/^ *\t*#//g<CR> \| :noh<CR>
 
 
 if exists('CStyle')

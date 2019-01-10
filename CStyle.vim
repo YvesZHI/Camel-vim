@@ -1,4 +1,17 @@
-command Q q|q|q|q|q|q|q
+"Q     --- quit vim and delete .ycm_extra_conf.py in directory of project
+"tg    --- toggle or untoggle
+"\cc   --- comment one line
+"\cm   --- comment multi lines
+"\cu   --- uncomment
+"\vv   --- grep word under cursor in directory of project
+"F12   --- jump to header file or to declaration
+"<C-o> --- go backward
+"<c-i> --- go forward
+
+
+command Q call delete('.ycm_extra_conf.py')|qa
+"command Qone q|TlistClose
+"cnoreabbrev q Qone
 command Html s/<[^>]*/\r&/g|g/^$/d
 command Gdb ConqueGdb
 
@@ -14,19 +27,32 @@ let g:clang_c_options='-std=gun11'
 let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 
 autocmd VimEnter * NERDTree
-execute pathogen#infect()
 
-let NERDTreeIgnore=['\(\.sh\|\.h\|\.c\|.hpp\|\.cpp\|makefile\|Makefile\|\.html\)\@<!$[[file]]', 'bin']
+let NERDTreeIgnore=['\(\.sh\|\.yaml\|\.mk\|\.h\|\.c\|.hpp\|\.cpp\|makefile\|Makefile\|\.html\)\@<!$[[file]]', 'bin']
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeShowLineNumbers=1
 
+"let g:ycm_semantic_triggers = {
+"  \   'h': [ 're!.' ],
+"  \   'c': [ 're!.' ],
+"  \   'hpp': [ 're!.' ],
+"  \   'cpp': [ 're!.' ]
+"  \ }
 let g:ycm_semantic_triggers = {
-  \   'h': [ 're!.' ],
-  \   'c': [ 're!.' ],
-  \   'hpp': [ 're!.' ],
-  \   'cpp': [ 're!.' ]
+  \   'h': [ '.', '->', '::' ],
+  \   'c': [ '.', '->', '::' ],
+  \   'hpp': [ '.', '->', '::' ],
+  \   'cpp': [ '.', '->', '::' ]
   \ }
 
+let g:Tlist_Use_Right_Window=1
+let g:Tlist_Auto_Open=1
+
+let g:EasyGrepRecursive=1
+let g:EasyGrepHidden=1
+let g:EasyGrepIgnoreCase=1
+let g:EasyGrepMode=2
+let g:EasyGrepFileAssociations=$HOME."/.vim/bundle/vim-easygrep/plugin/EasyGrepFileAssociations"
 
 let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
@@ -35,7 +61,7 @@ let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_min_num_of_chars_for_completion=1
 let g:ycm_cache_omnifunc=0
 let g:ycm_seed_identifiers_with_syntax=1
-let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf=$HOME."/.vim/.ycm_extra_conf.py"
 let g:ycm_server_keep_logfiles=1
 let g:ycm_server_log_level='debug'
 
@@ -64,12 +90,12 @@ let g:ConqueTerm_Color=2
 let g:ConqueTerm_CloseOnEnd=1
 let g:ConqueTerm_StartMessages=0
 
-nnoremap <F5> :!make<CR>
-vnoremap <F7> <C-v>^I//<Esc> \| :noh<CR>
-vnoremap <F8> :s/^ *\t*\/\///g<CR> \| :noh<CR>
-nnoremap <F7> <C-v>^I//<Esc> \| :noh<CR>
-nnoremap <F8> :s/^ *\t*\/\///g<CR> \| :noh<CR>
-           "\jd
-"nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:autotagTagsFile=".tags"
 
+nnoremap <F5> :!make<CR>
+
+nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
+"nnoremap <leader>tg :TlistToggle<CR>
+nnoremap tg :TlistToggle<CR>
+nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
+nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
