@@ -7,17 +7,17 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " options
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'tpope/vim-pathogen'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'dkprice/vim-easygrep'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'vim-scripts/Conque-GDB'
 Plugin 'taglist.vim'
-Plugin 'gmccreight/vim-easygrep'
+Plugin 'vim-scripts/Conque-GDB'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-pathogen'
 " sudo apt install ctags
 
 call vundle#end()
