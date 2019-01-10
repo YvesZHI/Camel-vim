@@ -59,3 +59,4 @@ nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<
 nnoremap <leader>tg :TlistToggle<CR>
 nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
 nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
+nnoremap <C-]> <C-]> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
