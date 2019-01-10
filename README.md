@@ -3,8 +3,8 @@ YCM-config
 
 
 ### Introduction ###
-Install and configure the YouCompleteMe and some other plugins.
-For C/C++ project, execute `vimc` at the root of project.
+Install and configure the YouCompleteMe and some other plugins.<br>
+For C/C++ project, execute `vimc` at the root of project.<br>
 For Python project, execute `vimpy` at the root of project.
 
 
