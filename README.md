@@ -21,8 +21,8 @@ Execute `source ~/.bashrc` if it is the first time to make `vimc` and `vimpy` wo
 `\cm`   --- comment multi lines<br>
 `\cu`   --- uncomment<br>
 `\vv`   --- search the word under cursor in project<br>
-`F12`   --- jump to header file or to declaration<br>
-`<C-]>` --- jump to definition<br>
+`F12`   --- jump to header file<br>
+`<C-]>` --- jump to declaration or to definition<br>
 `<C-o>` --- go backword<br>
 `<C-i>` --- go forward<br>
 
