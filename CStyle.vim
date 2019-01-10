@@ -1,5 +1,5 @@
-"Q     --- quit vim and delete .ycm_extra_conf.py in directory of project
-"\tg   --- toggle or untoggle
+"Q     --- quit vim and delete .ycm_extra_conf.py and .tags in directory of project
+"tg    --- toggle or untoggle
 "\cc   --- comment one line
 "\cm   --- comment multi lines
 "\cu   --- uncomment
@@ -9,7 +9,7 @@
 "<c-i> --- go forward
 
 
-command Q call delete('.ycm_extra_conf.py')|qa
+command Q call delete('.ycm_extra_conf.py')|call delete('.tags')|qa
 "command Qone q|TlistClose
 "cnoreabbrev q Qone
 command Html s/<[^>]*/\r&/g|g/^$/d
@@ -29,6 +29,9 @@ let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 autocmd VimEnter * NERDTree
 execute pathogen#infect()
 
+set tags=.tags
+autocmd VimEnter * silent! !eval 'ctags -R -o newtags; mv newtags .tags' &
+au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R -o newtags; mv newtags .tags' &
 
 let NERDTreeIgnore=['\(\.sh\|\.yaml\|\.mk\|\.h\|\.c\|.hpp\|\.cpp\|makefile\|Makefile\|\.html\)\@<!$[[file]]', 'bin']
 let NERDTreeAutoDeleteBuffer=1
@@ -92,11 +95,11 @@ let g:ConqueTerm_Color=2
 let g:ConqueTerm_CloseOnEnd=1
 let g:ConqueTerm_StartMessages=0
 
-let g:autotagTagsFile=".tags"
 
 nnoremap <F5> :!make<CR>
 
 nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
-nnoremap <leader>tg :TlistToggle<CR>
+"nnoremap <leader>tg :TlistToggle<CR>
+nnoremap tg :TlistToggle<CR>
 nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
 nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
