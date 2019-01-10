@@ -37,14 +37,14 @@ b) On Mac OS, you need to install `ctags` with `brew` with the command: `brew in
 
 
 ### References ###
-https://github.com/VundleVim/Vundle.vim (vim plugin manager)
+https://github.com/VundleVim/Vundle.vim (vim plugin manager)<br>
 https://github.com/Valloric/YouCompleteMe<br>
 https://github.com/rdnetto/YCM-Generator<br>
 https://github.com/tpope/vim-pathogen (start YCM automatically while executing vim)<br>
 https://github.com/scrooloose/nerdtree<br>
+https://github.com/vim-syntastic/syntastic<br>
 https://github.com/dkprice/vim-easygrep<br>
 https://github.com/scrooloose/nerdcommenter<br>
-https://github.com/vim-syntastic/syntastic<br>
 https://github.com/vim-scripts/taglist.vim<br>
 https://github.com/vim-scripts/Conque-GDB<br>
 https://github.com/rstacruz/sparkup<br>
