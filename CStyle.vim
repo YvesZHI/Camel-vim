@@ -87,8 +87,8 @@ let g:ConqueTerm_StartMessages=0
 
 nnoremap <F5> :!make<CR>
 
-nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
+nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 nnoremap <leader>tg :TlistToggle<CR>
-nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
-nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
-nnoremap <C-]> 2<C-]> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
+nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| :wincmd p<CR>
+nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| :wincmd p<CR>
+nnoremap <C-]> 2<C-]> \| :NERDTreeFind<CR> \| :wincmd p<CR>
