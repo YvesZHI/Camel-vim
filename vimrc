@@ -14,8 +14,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/Conque-GDB'
+Plugin 'taglist.vim'
 Plugin 'gmccreight/vim-easygrep'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-pathogen'
 " sudo apt install ctags
 
 call vundle#end()

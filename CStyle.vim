@@ -1,5 +1,5 @@
 "Q     --- quit vim and delete .ycm_extra_conf.py in directory of project
-"tg    --- toggle or untoggle
+"\tg   --- toggle or untoggle
 "\cc   --- comment one line
 "\cm   --- comment multi lines
 "\cu   --- uncomment
@@ -27,6 +27,8 @@ let g:clang_c_options='-std=gun11'
 let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 
 autocmd VimEnter * NERDTree
+execute pathogen#infect()
+
 
 let NERDTreeIgnore=['\(\.sh\|\.yaml\|\.mk\|\.h\|\.c\|.hpp\|\.cpp\|makefile\|Makefile\|\.html\)\@<!$[[file]]', 'bin']
 let NERDTreeAutoDeleteBuffer=1
@@ -95,7 +97,6 @@ let g:autotagTagsFile=".tags"
 nnoremap <F5> :!make<CR>
 
 nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
-"nnoremap <leader>tg :TlistToggle<CR>
-nnoremap tg :TlistToggle<CR>
+nnoremap <leader>tg :TlistToggle<CR>
 nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
 nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| <C-w><C-w> \| g;
