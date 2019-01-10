@@ -29,4 +29,4 @@ Execute `source ~/.bashrc` if it is the first time to make `vimc` and `vimpy` wo
 
 ### Some bugs ###
 a) Downloading clang may fail while installing YCM. In this case, you need to download clang (`libclang-7.0.0-x86_64-unknown-linux-gnu.tar.bz2` for x86_64) manually from https://dl.bintray.com/micbou/libclang/ and put it into `~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives/`.<br>
-b) On Mac OS, you need to install `ctags` with `brew` with the command: `brew install ctags`, and then add ``ctags="`brew --prefix`/bin/ctags"`` into the `~/.bashrc`.
+b) On Mac OS, you need to install `ctags` with `brew` with the command: `brew install ctags`, and then add ``alias ctags="`brew --prefix`/bin/ctags"`` into the `~/.bashrc`.
