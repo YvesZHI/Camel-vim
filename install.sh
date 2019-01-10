@@ -14,7 +14,7 @@ echo "alias vimc=\"cp ~/.vim/.ycm_extra_conf.py ./ && vim --cmd 'let CStyle=1'\"
 echo "alias vimpy=\"vim --cmd 'let python=1'\"" >> ~/.bashrc
 
 git clone https://github.com/universal-ctags/ctags.git
-cd ctags && ./autogen.sh && ./configure && make -j8 && sudo make install
+cd ctags && ./autogen.sh && ./configure && make -j8 && sudo make install && cd .. && rm -rf ctags
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
