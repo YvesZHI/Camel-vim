@@ -19,8 +19,8 @@ autocmd VimEnter * NERDTree
 execute pathogen#infect()
 
 set tags=.tags
-autocmd VimEnter * silent! !eval 'ctags -R -o newtags; mv newtags .tags' &
-au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R -o newtags; mv newtags .tags' &
+autocmd VimEnter * silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
+au BufWritePost *.h,*.c,*.cpp,*.hpp silent! !eval 'ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -o newtags; mv newtags .tags' &
 
 let NERDTreeIgnore=['\(\.sh\|\.yaml\|\.mk\|\.h\|\.c\|.hpp\|\.cpp\|makefile\|Makefile\|\.html\)\@<!$[[file]]', 'bin']
 let NERDTreeAutoDeleteBuffer=1
