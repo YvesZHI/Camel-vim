@@ -26,4 +26,4 @@ cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive
 
 vim -E -c PluginInstall -c q -c q
 
-echo "Now you should execute vim and type \":PluginInstall[Enter]\". Enjoy!"
+echo "done."
