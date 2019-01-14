@@ -56,10 +56,16 @@ flags = [
 # For a C project, you would set this to 'c' instead of 'c++'.
 '-x', 'c++',
 '-I', '.',
-'-I', './src/',
-'-I', './include/',
+#'-I', './src/',
+#'-I', './include/',
 '-I', '/usr/include/c++/5',
 ]
+
+for os_walk_entry in os.walk('./'):
+    if os.path.isdir(os_walk_entry[0]):
+        flags += ['-I', os_walk_entry[0]]
+def Settings(**kwargs):
+    return {'flags':flags}
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
 # compile_commands.json file to use that instead of 'flags'. See here for
