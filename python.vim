@@ -59,13 +59,19 @@ nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<
 nnoremap <leader>tg :TlistToggle<CR>
 nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| :wincmd p<CR>
-function! DetectTagsFile()
+function! Jump(type)
     if filereadable(".tags")
-        execute "normal! 2\<C-]>"
-        execute "normal :NERDTreeFind\<CR>"
-        execute "normal :wincmd p\<CR>"
+        if a:type == "single"
+            execute "normal! 2\<C-]>"
+            execute "normal :NERDTreeFind\<CR>"
+            execute "normal :wincmd p\<CR>"
+        else
+            execute "normal! g\<C-]>"
+            execute "normal :redraw!"
+        endif
     else
         execute "normal :echo 'tags file not ready'\<CR>"
     endif
 endfunction
-nnoremap <C-]> :call DetectTagsFile()<CR>
+nnoremap <C-]> :call Jump('single')<CR>
+nnoremap g<C-]> :call Jump('multi')<CR>
