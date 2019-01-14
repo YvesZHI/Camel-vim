@@ -31,6 +31,9 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 `<C-o>`:&nbsp;&nbsp; go backword<br>
 `<C-i>`:&nbsp;&nbsp; go forward<br>
 
+### Tips ###
+`<C-]>` is set as `2<C-]>` in `.vim` files, because the second option is normally what you need. If not, type `g<C-]>` then a number to do your choice.
+
 
 ### Some bugs ###
 a) Downloading clang may fail while installing YCM. In this case, you need to download clang (`libclang-7.0.0-x86_64-unknown-linux-gnu.tar.bz2` for x86_64) manually from https://dl.bintray.com/micbou/libclang/ and put it into `~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives/`.<br>
