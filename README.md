@@ -32,8 +32,9 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 `<C-i>`:&nbsp;&nbsp; go forward<br>
 
 ### Tips ###
-`<C-]>` is set as `2<C-]>` in `.vim` files, because the second option is normally what you need. If not, type `g<C-]>` then a number to do your choice.<br>
-For huge/distributed projects, use `F12` before `<C-]>` is recommended if possible.
+1) `<C-]>` is set as `2<C-]>` in `.vim` files, because the second option is normally what you need. If not, type `g<C-]>` then a number to do your choice.<br>
+2) For huge/distributed projects, use `F12` before `<C-]>` is recommended if possible.<br>
+3) If `tags file not ready` is printed while typing `<C-]>` or `g<C-]>`, it means that the file `.tags` hasn't been generated yet by `ctags`. It is probably because that the project is so huge that `ctags` needs some time to generate the `.tags`.
 
 
 ### Some bugs ###
