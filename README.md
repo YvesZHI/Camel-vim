@@ -19,13 +19,13 @@ Why "at the root of project"? To ensure that searching or jumping in the project
 
 
 
-`:Q`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quit vim and all plugins, delete `.ycm_extra_conf.py` and `.tags` in the root of project<br>
-`\tg`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; open or close the window of taglist<br>
-`\cc`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comment one line<br>
-`\cm`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comment multi lines<br>
-`\cu`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uncomment<br>
-`\vv`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; search the word under cursor in project<br>
-`F12`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jump to header file<br>
+`:Q`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quit vim and all plugins, delete `.ycm_extra_conf.py` and `.tags` in the root of project<br>
+`\tg`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; open or close the window of taglist<br>
+`\cc`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comment one line<br>
+`\cm`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comment multi lines<br>
+`\cu`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uncomment<br>
+`\vv`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; search the word under cursor in project<br>
+`F12`:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jump to header file<br>
 `<C-]>`:&nbsp;&nbsp;&nbsp; jump to declaration or to definition<br>
 `g<C-]>`:&nbsp; jump to the only match or list multi matches<br>
 `<C-o>`:&nbsp;&nbsp; go backword<br>
