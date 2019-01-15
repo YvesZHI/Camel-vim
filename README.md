@@ -3,7 +3,9 @@ CStyle-Python-vim-config
 
 
 ### Introduction ###
-Install and configure the YouCompleteMe and some other plugins to build the vim environment for C/C++ project and for Python project.
+Install and configure the YouCompleteMe and some other plugins to build the vim environment for C/C++ project and for Python project.<br>
+It allows you to search words, comment and uncomment codes easily.<br>
+It allows you to jump to header files, to declaration and to definition recusively.
 
 
 ### Installation ###
