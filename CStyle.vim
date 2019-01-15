@@ -70,6 +70,7 @@ let g:syntastic_cpp_checkers = ['gcc']
 let g:syntastic_cpp_compiler = 'gcc'
 "let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
+let g:syntastic_quiet_messages = {'regex': 'No such file or directory'}
 
 let g:ConqueGdb_Leader='<Leader>'
 let g:ConqueGdb_Run=g:ConqueGdb_Leader . 'r'
