@@ -43,11 +43,18 @@ let g:ycm_min_num_of_chars_for_completion=1
 let g:ycm_cache_omnifunc=0
 let g:ycm_seed_identifiers_with_syntax=1
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_enable_signs=1
+let g:syntastic_python_checkers=['python']
+let g:syntastic_python_python_exec= '/usr/bin/python'
+"let g:syntastic_python_checkers=['python', 'py3kwarn']
+
 
 let g:ConqueTerm_Color=2
 let g:ConqueTerm_CloseOnEnd=1
