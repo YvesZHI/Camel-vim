@@ -45,6 +45,7 @@ set smarttab
 set expandtab
 set softtabstop=4
 set matchtime=2
+set statusline=%<%f\ %h%m%r\ %y%=%{v:register}\ %-14.(%l,%c%V%)\ %P
 
 set hlsearch
 
