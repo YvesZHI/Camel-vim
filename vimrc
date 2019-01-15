@@ -78,7 +78,7 @@ if exists('CStyle')
 	source ~/.vim/CStyle.vim
 endif
 
-if exists('python')
-	source ~/.vim/python.vim
-endif
+"if exists('python')
+"	source ~/.vim/python.vim
+"endif
 
