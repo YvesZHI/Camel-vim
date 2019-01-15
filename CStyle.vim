@@ -97,15 +97,14 @@ nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| :wincmd p<CR>
 function! Jump(type)
     if filereadable(".tags")
         if a:type == "single"
-            execute "normal! 2\<C-]>"
-            execute "normal :NERDTreeFind\<CR>"
-            execute "normal :wincmd p\<CR>"
+            execute "2tag " . expand("<cword>")
+            NERDTreeFind
+            wincmd p
         else
-            execute "normal! g\<C-]>"
-            execute "normal :redraw!"
+            execute "tjump " . expand("<cword>")
         endif
     else
-        execute "normal :echo 'tags file not ready'\<CR>"
+        echo 'tags file not ready'
     endif
 endfunction
 nnoremap <C-]> :call Jump('single')<CR>
