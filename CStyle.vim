@@ -8,9 +8,6 @@ set completeopt=menu,preview,longest
 set completeopt-=preview
 set conceallevel=2
 set concealcursor=vin
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 let g:clang_c_options='-std=gun11'
 let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
