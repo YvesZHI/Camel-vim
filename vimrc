@@ -67,6 +67,9 @@ set background=dark
 colorscheme codedark
 hi! Normal ctermbg=NONE guibg=NONE
 hi LineNr ctermfg=blue ctermbg=black
+hi Visual cterm=bold ctermbg=DarkCyan ctermfg=White
+hi MatchParen cterm=reverse ctermbg=NONE ctermfg=NONE
+
 
 nnoremap <C-k> kddpk
 nnoremap <C-j> ddp
