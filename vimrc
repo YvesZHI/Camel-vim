@@ -69,6 +69,7 @@ hi! Normal ctermbg=NONE guibg=NONE
 hi LineNr ctermfg=blue ctermbg=black
 hi Visual cterm=bold ctermbg=DarkCyan ctermfg=White
 hi MatchParen cterm=reverse ctermbg=NONE ctermfg=NONE
+hi StatusLine ctermbg=White ctermfg=DarkGrey
 
 set matchpairs+=<:>
 
