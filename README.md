@@ -60,3 +60,4 @@ https://github.com/vim-scripts/taglist.vim<br>
 https://github.com/vim-scripts/Conque-GDB<br>
 https://github.com/rstacruz/sparkup<br>
 https://github.com/tpope/vim-fugitive<br>
+https://github.com/tomasiser/vim-code-dark<br>
