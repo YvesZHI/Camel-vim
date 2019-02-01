@@ -18,6 +18,7 @@ Plugin 'taglist.vim'
 Plugin 'vim-scripts/Conque-GDB'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'tpope/vim-fugitive'
+Plugin 'tomasiser/vim-code-dark'
 " sudo apt install ctags
 
 call vundle#end()
@@ -63,10 +64,9 @@ syntax enable
 syntax on
 
 set background=dark
-colorscheme hybrid
-hi LineNr ctermfg=darkgrey ctermbg=black
-set cursorline
-hi CursorLine ctermbg=black
+colorscheme codedark
+hi! Normal ctermbg=NONE guibg=NONE
+hi LineNr ctermfg=blue ctermbg=black
 
 nnoremap <C-k> kddpk
 nnoremap <C-j> ddp

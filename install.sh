@@ -5,7 +5,6 @@ mkdir ~/.vim 2>/dev/null
 
 cp ./vimrc ~/.vimrc
 cp ./ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
-cp -r ./colors ~/.vim/
 cp ./*.vim ~/.vim/
 
 sed -i '/CStyle=1/c\' ~/.bashrc
