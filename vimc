@@ -1,0 +1,41 @@
+VimC()
+{
+    absPath=$( cd \"$(dirname \"$0\")\" >/dev/null 2>&1 ; pwd -P )
+    res=`du -s $absPath | awk '{print $1}'`
+    if [[ $res -gt $1 ]]; then
+        while true; do
+            res=`bc <<< "scale=2; $res/1024"` # convert KB to MB
+            read -r -p "The current directory size: $res MB. Continue? [Y/n] " input
+            case $input in
+                [yY][eE][sS]|[yY])
+                    break
+                    ;;
+                [nN][oO]|[nN])
+                    echo 'Abort.'
+                    return 1
+                    ;;
+                *)
+                    echo "Invalid input..."
+                    ;;
+            esac
+        done
+    fi
+    typeLanguage=`cat ~/.vim/.type`
+    if [[ $typeLanguage == 'python' ]]; then
+        #vim --cmd 'let Python=1' -o ~/.vim/banner.txt
+        vim --cmd 'let Python=1' +'setlocal readonly' ~/.vim/banner.txt
+    elif [[ $typeLanguage == 'go' ]]; then
+        #vim --cmd 'let Giraffa=1' -o ~/.vim/banner.txt
+        https_proxy='' vim --cmd 'let Giraffa=1' +'setlocal readonly' ~/.vim/banner.txt
+    elif [[ $typeLanguage == 'cpp' ]]; then
+        #vim --cmd 'let Camel=1' -o ~/.vim/banner.txt
+        vim --cmd 'let Camel=1' +'setlocal readonly' ~/.vim/banner.txt
+    elif [[ $typeLanguage == 'java' ]]; then
+        #vim --cmd 'let Jaguar=1' -o ~/.vim/banner.txt
+        vim --cmd 'let Jaguar=1' +'setlocal readonly' ~/.vim/banner.txt
+    else
+        echo "Unknown language..."
+    fi
+}
+
+alias vimc="VimC 100000" # 100MB
