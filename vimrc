@@ -4,6 +4,7 @@ filetype off
 filetype plugin indent on
 
 set nu
+set rnu
 set ruler
 
 set showcmd
