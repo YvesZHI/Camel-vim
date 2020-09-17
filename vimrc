@@ -113,6 +113,7 @@ if exists('Camel')
     Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
     Plugin 'Yggdroot/indentLine'
     Plugin 'jiangmiao/auto-pairs'
+    Plugin 'tpope/vim-repeat'
     Plugin 'YvesZHI/vim-code-dark'
     Plugin 'YvesZHI/vim-cpp-enhanced-highlight'
     Plugin 'vim-scripts/Conque-GDB'
@@ -122,6 +123,37 @@ if exists('Camel')
         source ~/.vim/Camel.vim
     endif
 endif
+
+nnoremap <silent> <Plug>SurroundSingleQuote ciw''<Esc>P:silent! call repeat#set("\<Plug>SurroundSingleQuote", v:count)<CR>
+nmap <Leader>' <Plug>SurroundSingleQuote
+nnoremap <silent> <Plug>UnsurroundSingleQuote F'xf'x:silent! call repeat#set("\<Plug>UnsurroundSingleQuote", v:count)<CR>
+nmap <Leader><leader>' <Plug>UnsurroundSingleQuote
+nnoremap <silent> <Plug>SurroundDoubleQuote ciw""<Esc>P:silent! call repeat#set("\<Plug>SurroundDoubleQuote", v:count)<CR>
+nmap <Leader>" <Plug>SurroundDoubleQuote
+nnoremap <silent> <Plug>UnsurroundDoubleQuote F"xf"x:silent! call repeat#set("\<Plug>UnsurroundDoubleQuote", v:count)<CR>
+nmap <Leader><leader>" <Plug>UnsurroundDoubleQuote
+nnoremap <silent> <Plug>SurroundParentheses ciw()<Esc>P:silent! call repeat#set("\<Plug>SurroundParentheses", v:count)<CR>
+nmap <Leader>( <Plug>SurroundParentheses
+nnoremap <silent> <Plug>UnsurroundParentheses F(xf)x:silent! call repeat#set("\<Plug>UnsurroundParentheses", v:count)<CR>
+nmap <Leader><leader>( <Plug>UnsurroundParentheses
+nnoremap <silent> <Plug>SurroundBrackets ciw[]<Esc>P:silent! call repeat#set("\<Plug>SurroundBrackets", v:count)<CR>
+nmap <Leader>[ <Plug>SurroundBrackets
+nnoremap <silent> <Plug>UnsurroundBrackets F[xf]x:silent! call repeat#set("\<Plug>UnsurroundBrackets", v:count)<CR>
+nmap <Leader><leader>[ <Plug>UnsurroundBrackets
+nnoremap <silent> <Plug>SurroundBraces ciw{}<Esc>P:silent! call repeat#set("\<Plug>SurroundBraces", v:count)<CR>
+nmap <Leader>{ <Plug>SurroundBraces
+nnoremap <silent> <Plug>UnsurroundBraces F{xf}x:silent! call repeat#set("\<Plug>UnsurroundBraces", v:count)<CR>
+nmap <Leader><leader>{ <Plug>UnsurroundBraces
+nnoremap <silent> <Plug>SurroundChevrons ciw<><Esc>P:silent! call repeat#set("\<Plug>SurroundChevrons", v:count)<CR>
+nmap <Leader>< <Plug>SurroundChevrons
+nnoremap <silent> <Plug>UnsurroundChevrons F<xf>x:silent! call repeat#set("\<Plug>UnsurroundChevrons", v:count)<CR>
+nmap <Leader><leader>< <Plug>UnsurroundChevrons
+vnoremap <leader>' s''<Esc>P
+vnoremap <leader>" s""<Esc>P
+vnoremap <leader>( s()<Esc>P
+vnoremap <leader>[ s[]<Esc>P
+vnoremap <leader>{ s{}<Esc>P
+vnoremap <leader>< s<><Esc>P
 
 " The color settings must be at the end of file
 hi! Normal ctermbg=NONE guibg=NONE
