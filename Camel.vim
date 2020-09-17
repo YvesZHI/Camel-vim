@@ -30,6 +30,7 @@ let g:clang_cpp_options='-std=c++11 -stdlib=libc++'
 "augroup END
 
 autocmd VimEnter * NERDTree
+autocmd VimEnter * execute "let g:projectPath = expand('%:p:h')"
 autocmd VimEnter * execute "normal j"
 " clang is necessary so we use a fixed config file
 let g:ycm_global_ycm_extra_conf=$HOME."/.vim/.ycm_extra_conf.py"
