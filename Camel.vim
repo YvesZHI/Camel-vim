@@ -217,9 +217,20 @@ nnoremap mt <C-w><C-t>
 nnoremap mb <C-w><C-b>
 nnoremap mp <C-w><C-p>
 
-nnoremap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR> \| :NERDTreeFind<CR> \| :wincmd p<CR>
-nnoremap <C-i> <C-i> \| :NERDTreeFind<CR> \| :wincmd p<CR>
-nnoremap <C-o> <C-o> \| :NERDTreeFind<CR> \| :wincmd p<CR>
+nnoremap <F12> :YcmCompleter GoToDefinition<CR> \| :call RefreshNerdtree()<CR>
+nnoremap <C-i> <C-i> \| :call RefreshNerdtree()<CR>
+nnoremap <C-o> <C-o> \| :call RefreshNerdtree()<CR>
+
+function! RefreshNerdtree()
+    let curPath = expand('%:p:h')[0:len(g:projectPath) - 1]
+    if curPath == g:projectPath
+        execute 'NERDTree "g:projectPath"'
+        execute 'wincmd p'
+    endif
+    execute 'NERDTreeFind'
+    execute 'wincmd p'
+endfunction
+
 function! Jump(type)
     if filereadable(".tags")
         if a:type == "single"
