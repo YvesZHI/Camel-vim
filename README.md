@@ -124,6 +124,7 @@ https://github.com/vim-scripts/taglist.vim<br>
 https://github.com/rstacruz/sparkup<br>
 https://github.com/Yggdroot/indentLine<br>
 https://github.com/jiangmiao/auto-pairs<br>
+https://github.com/tpope/vim-repeat<br>
 https://github.com/YvesZHI/vim-code-dark<br>
 https://github.com/YvesZHI/vim-cpp-enhanced-highlight<br>
 https://github.com/vim-scripts/Conque-GDB<br>
