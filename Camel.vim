@@ -36,6 +36,7 @@ let g:ycm_global_ycm_extra_conf=$HOME."/.vim/.ycm_extra_conf.py"
 "autocmd VimEnter * silent! !eval '~/.vim/bundle/YCM-Generator/config_gen.py . >/dev/null 2>&1 &'
 autocmd VimLeave * silent! !eval 'rm newtags .tags .clang-format .ycm_extra_conf.py 2>/dev/null'
 autocmd VimEnter * NERDTree
+autocmd VimEnter * execute "let g:projectPath = expand('%:p:h')"
 autocmd VimEnter * execute "normal j"
 autocmd VimEnter * execute "call DeleteBufferImg()"
 function! BufferDelete(id)
