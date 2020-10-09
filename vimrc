@@ -71,25 +71,9 @@ inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 nnoremap + <C-w>>
 nnoremap - <C-w><
 
-vnoremap <leader>' s''<Esc>P
-nnoremap <leader>' ciw''<Esc>P
-vnoremap <leader>" s""<Esc>P
-nnoremap <leader>" ciw""<Esc>P
-vnoremap <leader>( s()<Esc>P
-nnoremap <leader>( ciw()<Esc>P
-vnoremap <leader>[ s[]<Esc>P
-nnoremap <leader>[ ciw[]<Esc>P
-vnoremap <leader>{ s{}<Esc>P
-nnoremap <leader>{ ciw{}<Esc>P
-vnoremap <leader>< s<><Esc>P
-nnoremap <leader>< ciw<><Esc>P
-
-nnoremap <leader><leader>' F'xf'x
-nnoremap <leader><leader>" F"xf"x
-nnoremap <leader><leader>( F(xf)x
-nnoremap <leader><leader>[ F[xf]x
-nnoremap <leader><leader>{ F{xf}x
-nnoremap <leader><leader>< F<xf>x
+noremap x "_x
+noremap s "_s
+vnoremap p "_dP
 
 command Qt tabclose
 
