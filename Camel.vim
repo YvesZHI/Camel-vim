@@ -85,6 +85,8 @@ augroup templates
     endfun
 augroup END
 
+autocmd User FugitiveChanged NERDTreeRefreshRoot
+
 let g:NERDTreeWinSize=24
 let baseFileType='\.yaml\|\.yml\|\.json\|\.toml\|\.xml\|\.html\|\.sh'
 let currentFileType='\.h\|\.hpp\|\.c\|\.cpp\|\.cc\|makefile\|Makefile\|CMakeLists.txt'
