@@ -90,7 +90,8 @@ if exists('Camel')
     " options
     "Plugin 'Valloric/YouCompleteMe'
     Plugin 'rdnetto/YCM-Generator'
-    Plugin 'scrooloose/nerdtree'
+    Plugin 'preservim/nerdtree' |
+                \ Plugin 'Xuyuanp/nerdtree-git-plugin'
     Plugin 'scrooloose/syntastic'
     Plugin 'ctrlpvim/ctrlp.vim'
     Plugin 'scrooloose/nerdcommenter'
