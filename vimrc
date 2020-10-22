@@ -144,6 +144,8 @@ vnoremap <leader>[ s[]<Esc>P
 vnoremap <leader>{ s{}<Esc>P
 vnoremap <leader>< s<><Esc>P
 
+inoremap <C-e> <Esc>lxEpa
+
 " The color settings must be at the end of file
 hi! Normal ctermbg=NONE guibg=NONE
 hi LineNr ctermfg=blue ctermbg=black
