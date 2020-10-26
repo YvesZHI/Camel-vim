@@ -145,6 +145,8 @@ vnoremap <leader>{ s{}<Esc>P
 vnoremap <leader>< s<><Esc>P
 
 inoremap <C-e> <Esc>lxEpa
+inoremap <C-l> <Esc>A
+inoremap <C-h> <Esc>I
 
 " The color settings must be at the end of file
 hi! Normal ctermbg=NONE guibg=NONE
