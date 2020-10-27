@@ -146,7 +146,6 @@ vnoremap <leader>< s<><Esc>P
 
 inoremap <C-e> <Esc>lxEpa
 inoremap <C-l> <Esc>A
-inoremap <C-h> <Esc>I
 inoremap <C-\> <Esc>ciw
 
 " The color settings must be at the end of file
