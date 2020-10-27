@@ -89,7 +89,7 @@ similar shortcuts: `\"` and `\\"`, `\(` and `\\(`, `\[` and `\\[`, `\{` and `\\{
 ##### Insert Mode
 `<C-j>`: move cursor backwards out of parenthesis<br>
 `<C-k>`: goto normal mode and save<br>
-`<C-e>`: move the current to the end of next word<br>
+`<C-e>`: move the current character to the end of next word<br>
 `<C-l>`: move the cursor to the end of line<br>
 `<C-h>`: move the cursor to the first non-blank in the line<br> 
 `<C-\>`: delete the word under the cursor<br>
