@@ -143,7 +143,7 @@ vnoremap <leader>[ s[]<Esc>P
 vnoremap <leader>{ s{}<Esc>P
 vnoremap <leader>< s<><Esc>P
 
-inoremap <C-e> <Esc>lxEpa
+inoremap <C-e> <Esc>lxepi
 inoremap <C-l> <Esc>A
 inoremap <C-\> <Esc>ciw
 
