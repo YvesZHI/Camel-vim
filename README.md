@@ -105,6 +105,9 @@ To get more information about usage, click on the links at the References below.
 8) `vim -Nu ~/.vim/bundle/YouCompleteMe/vimrc_ycm_minimal xxx.cpp` to get minimal vim configuration for YCM to debug YCM.<br>
 9) Debug commands of YCM: `:YcmDiags`, `YcmDebugInfo`, `YcmToggleLogs`.
 
+### C-family Semantic Completion Engine
+As YCM doc mentioned, we can have two choices to enable this important function: `compile_commands.json` or `.ycm_extra_conf.py`. The first one always has the better performance so we pick it. Read this link about how to generate the file `compile_commands.json`: https://github.com/MaskRay/ccls/wiki/Project-Setup. You just need to add a flag while executing `cmake ../` in your directory `build`: `cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=YES ../`.
+
 
 ### About syntax highlight ###
 Custom names aren't recommended to use the used words in C++ Standard Library and in STL. So words like `count` from `int count;` would be highlighted as it is the function name coming from STL. If you want to get a custom name like `count` without highlight, you need to replace the line `systax keyword cppSTLfunction count` into `syntax match cppSTLfunction "\(\.|-\>\)\@<=count"` in the file `cpp.vim` in `~/.vim/after/syntax/`.<br>
