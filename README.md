@@ -22,7 +22,7 @@ Execute `./install.sh` to do the installation.
 
 ##### Issues #####
 a) YouCompleteMe may have many issues. If there are some failures about it, try to reinstall it and execute `./install_YCM.sh` manually. Here are two examples:<br>
-- Downloading clang may fail while installing YCM. In this case, you need to download clang (`libclang-7.0.0-x86_64-unknown-linux-gnu.tar.bz2` for x86_64) manually from https://dl.bintray.com/micbou/libclang/ and put it into `~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives/`, then execute `./install_YCM.sh` to finish the installation.<br>
+- Downloading clang may fail while installing YCM. In this case, you need to download clang (`clangd-11.0.0-x86_64-unknown-linux-gnu.tar.bz2` for x86_64) manually from https://github.com/ycm-core/llvm/releases, and extract it into `~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/clangd/output/`, then execute `./install_YCM.sh` to finish the installation.<br>
 - Omnisharp for c# may fail on downloading for some reason. This error can be ignored if you don't use c#. Otherwise, you can manually download it from https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v1.32.19/omnisharp.http-linux-x64.tar.gz and move it into `~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/omnisharp-roslyn/v1.32.19/`, then execute `./install_YCM.sh` to finish the installation.<br>
 
 b) On Mac OS, you need to install `ctags` with `brew` with the command: `brew install ctags`, and then add ``alias ctags="`brew --prefix`/bin/ctags"`` into the `~/.bashrc`.
@@ -108,6 +108,8 @@ To get more information about usage, click on the links at the References below.
 ### C-family Semantic Completion Engine
 As YCM doc mentioned, we can have two choices to enable this important function: `compile_commands.json` or `.ycm_extra_conf.py`. The first one always has the better performance so we pick it. Read this link about how to generate the file `compile_commands.json`: https://github.com/MaskRay/ccls/wiki/Project-Setup. You just need to add a flag while executing `cmake ../` in your directory `build`: `cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=YES ../`.
 
+### clang-format
+`clang-format` is used as the formatter. But different versions may cause different config files. You can execute `clang-format -style=llvm -dump-config > clang-format.conf.default` to generate a config file by default and modify it. Then, put it into `~/.vim` and rename it `clang-format.conf`.
 
 ### About syntax highlight ###
 Custom names aren't recommended to use the used words in C++ Standard Library and in STL. So words like `count` from `int count;` would be highlighted as it is the function name coming from STL. If you want to get a custom name like `count` without highlight, you need to replace the line `systax keyword cppSTLfunction count` into `syntax match cppSTLfunction "\(\.|-\>\)\@<=count"` in the file `cpp.vim` in `~/.vim/after/syntax/`.<br>
