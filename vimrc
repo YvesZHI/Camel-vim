@@ -73,6 +73,9 @@ inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 nnoremap + <C-w>>
 nnoremap - <C-w><
 
+nnoremap * :keepjumps normal! mi*`i<CR>
+nnoremap # :keepjumps normal! mi#`i<CR>
+
 noremap x "_x
 noremap s "_s
 vnoremap p "_dP
