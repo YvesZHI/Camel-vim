@@ -52,6 +52,7 @@ command NOH noh
 inoremap <C-k> <Esc>:w<CR>
 nnoremap <C-k> :w<CR>:noh<CR>
 nnoremap <C-\> i<CR><Esc>
+nnoremap <CR> :noh<CR><CR>
 
 "function! AutoIndent()
 "    startinsert
